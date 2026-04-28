@@ -567,6 +567,10 @@ function closePreview() {
     modal.classList.remove('active');
 }
 
+// Expose for inline HTML handlers
+window.openPreview = openPreview;
+window.closePreview = closePreview;
+
 // Smooth FAQ animation
 document.querySelectorAll('.faq-item').forEach(item => {
     const question = item.querySelector('.faq-question');
