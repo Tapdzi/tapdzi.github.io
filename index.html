@@ -1,12 +1,367 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Strona Tapdzi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapdzi - Free Website Templates for React, Vue and Vanilla JS</title>
+    <meta name="description" content="Free, ready-to-use website templates for React, Vue, and Vanilla JavaScript. Browse, download, and start building faster with Tapdzi.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1a1a2e">
+    <link rel="canonical" href="https://tapdzi.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tapdzi.github.io/">
+    <meta property="og:title" content="Tapdzi - Free Website Templates">
+    <meta property="og:description" content="Ready-to-use templates for React, Vue, and Vanilla JS. Choose your stack and start building.">
+    <meta property="og:image" content="https://tapdzi.github.io/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tapdzi - Free Website Templates">
+    <meta name="twitter:description" content="Free templates for React, Vue, and Vanilla JS.">
+    <meta name="twitter:image" content="https://tapdzi.github.io/logo.png">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Tapdzi",
+      "url": "https://tapdzi.github.io/",
+      "description": "Free, ready-to-use website templates for React, Vue, and Vanilla JavaScript."
+    }
+    </script>
 </head>
-<body>
-    <h1>Witaj na tapdzi.github.io</h1>
+<body class="is-loading">
+    <div id="pageLoader" class="page-loader" aria-hidden="true">
+        <div class="page-loader-inner">
+            <img src="logo.png" alt="" class="page-loader-logo">
+            <p class="page-loader-text">Loading Tapdzi...</p>
+            <div class="page-loader-bar"><span></span></div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="logo.png" alt="Tapdzi" class="logo-img">
+                <span>Tapdzi</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#templates" data-i18n="nav.templates">Templates</a></li>
+                <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+            </ul>
+            <div class="lang-dropdown">
+                <button class="lang-btn" id="langBtn">
+                    <span class="lang-current" id="langCurrent">EN</span>
+                    <svg class="lang-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </button>
+                <div class="lang-menu" id="langMenu">
+                    <button class="lang-option" data-lang="en">English</button>
+                    <button class="lang-option" data-lang="pl">Polski</button>
+                    <button class="lang-option" data-lang="de">Deutsch</button>
+                    <button class="lang-option" data-lang="es">Español</button>
+                    <button class="lang-option" data-lang="fr">Français</button>
+                    <button class="lang-option" data-lang="zh">中文</button>
+                    <button class="lang-option" data-lang="ja">日本語</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title fade-in-up" data-i18n="hero.title">
+                    Website templates by <span class="accent-text">Tapdzi</span>
+                </h1>
+                <p class="hero-subtitle fade-in-up delay-1" data-i18n="hero.subtitle">
+                    Ready-to-use website templates. Choose your technology and start building.
+                </p>
+                <div class="hero-cta fade-in-up delay-2">
+                    <a href="#templates" class="btn btn-primary" data-i18n="hero.browse">Browse Templates</a>
+                    <a href="https://github.com/tapdzi" class="btn btn-secondary" target="_blank">GitHub</a>
+                </div>
+                <p class="hero-social-proof fade-in-up delay-3" data-i18n="hero.social">
+                    <span id="githubTemplatesCount">...</span> templates on GitHub • Last update: <span id="githubLastUpdate">...</span>
+                </p>
+            </div>
+            <aside id="about" class="hero-about">
+                <div class="hero-about-head">
+                    <img src="profile.png" alt="Tapdzi profile" class="hero-about-avatar">
+                    <div class="hero-about-meta">
+                        <h3 class="hero-about-greeting" data-i18n="about.greeting">Hi, I'm Tapdzi</h3>
+                        <p class="hero-about-role" data-i18n="about.role">Indie template maker</p>
+                    </div>
+                </div>
+                <p class="hero-about-desc" data-i18n="about.desc1">I create free templates for developers. I started with simple websites, now I help others get started with projects faster. All templates are open-source and available on GitHub.</p>
+                <p class="hero-about-note" data-i18n="about.desc2">If you have an idea for a new template or want to share feedback - let me know!</p>
+                <div class="hero-about-actions">
+                    <a href="https://www.youtube.com/@tapdzi" class="btn btn-primary hero-about-btn" target="_blank" rel="noopener noreferrer" data-i18n="about.youtube">YouTube Channel</a>
+                </div>
+            </aside>
+        </div>
+    </header>
+
+    <section id="templates" class="templates">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="templates.title">Templates</h2>
+                <p data-i18n="templates.subtitle">Click to preview</p>
+            </div>
+            <div class="template-tech-nav" role="tablist" aria-label="Template technologies">
+                <button class="tech-filter-btn active" type="button" data-tech-filter="react">React</button>
+                <button class="tech-filter-btn" type="button" data-tech-filter="vue">Vue</button>
+                <button class="tech-filter-btn" type="button" data-tech-filter="vanilla">Vanilla</button>
+            </div>
+
+            <!-- React -->
+            <div id="react-templates" class="category-section" data-tech="react">
+                <h3 class="category-title">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/3840px-React-icon.svg.png" alt="React" class="category-logo">
+                    React
+                </h3>
+                <div class="templates-grid">
+                    <div class="template-card reveal" onclick="openPreview('react')">
+                        <div class="card-preview-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/3840px-React-icon.svg.png" alt="React">
+                            <span class="preview-fallback">Preview unavailable</span>
+                        </div>
+                        <div class="card-content">
+                            <h4>React Starter</h4>
+                            <p>React + TypeScript + Vite</p>
+                            <span class="update-date">Updated: Jan 2025</span>
+                            <a href="#" class="card-btn" onclick="event.stopPropagation()" target="_blank" data-i18n="card.download">
+                                Download
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="template-card reveal" onclick="openPreview('dashboard')">
+                        <div class="card-preview-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/3840px-React-icon.svg.png" alt="React Dashboard">
+                            <span class="preview-fallback">Preview unavailable</span>
+                        </div>
+                        <div class="card-content">
+                            <h4>Admin Dashboard</h4>
+                            <p>React + Tailwind + Charts</p>
+                            <span class="update-date">Updated: Feb 2025</span>
+                            <a href="#" class="card-btn" onclick="event.stopPropagation()" target="_blank" data-i18n="card.download">
+                                Download
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vue -->
+            <div id="vue-templates" class="category-section" data-tech="vue">
+                <h3 class="category-title">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/960px-Vue.js_Logo_2.svg.png" alt="Vue" class="category-logo">
+                    Vue
+                </h3>
+                <div class="templates-grid">
+                    <div class="template-card reveal" onclick="openPreview('vue')">
+                        <div class="card-preview-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/960px-Vue.js_Logo_2.svg.png" alt="Vue">
+                            <span class="preview-fallback">Preview unavailable</span>
+                        </div>
+                        <div class="card-content">
+                            <h4>Vue Starter</h4>
+                            <p>Vue 3 + Composition API</p>
+                            <span class="update-date">Updated: Jan 2025</span>
+                            <a href="#" class="card-btn" onclick="event.stopPropagation()" target="_blank" data-i18n="card.download">
+                                Download
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vanilla JS -->
+            <div id="vanilla-templates" class="category-section" data-tech="vanilla">
+                <h3 class="category-title">
+                    <img src="https://cdn.vectorstock.com/i/750p/27/74/vanilla-javascript-language-vector-31602774.avif" alt="Vanilla JS" class="category-logo">
+                    Vanilla JS
+                </h3>
+                <div class="templates-grid">
+                    <div class="template-card reveal" onclick="openPreview('vanilla')">
+                        <div class="card-preview-img">
+                            <img src="https://cdn.vectorstock.com/i/750p/27/74/vanilla-javascript-language-vector-31602774.avif" alt="Vanilla JS">
+                            <span class="preview-fallback">Preview unavailable</span>
+                        </div>
+                        <div class="card-content">
+                            <h4>Vanilla Starter</h4>
+                            <p>ES6+ without frameworks</p>
+                            <span class="update-date">Updated: Dec 2024</span>
+                            <a href="#" class="card-btn" onclick="event.stopPropagation()" target="_blank" data-i18n="card.download">
+                                Download
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Preview Modal -->
+    <div id="previewModal" class="preview-modal" onclick="closePreview()">
+        <div class="preview-modal-content" onclick="event.stopPropagation()">
+            <button class="preview-close" onclick="closePreview()">&times;</button>
+            <img src="" alt="Preview" id="previewModalImg">
+        </div>
+    </div>
+
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 data-i18n="features.title">Why our templates?</h2>
+                <p data-i18n="features.subtitle">Everything you need for a quick start</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="features.quickstart.title">Quick Start</h3>
+                    <p data-i18n="features.quickstart.desc">Start your project in minutes with ready-to-use, configured templates.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="features.free.title">100% Free</h3>
+                    <p data-i18n="features.free.desc">All templates are open-source and free for commercial use.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="features.updated.title">Regularly Updated</h3>
+                    <p data-i18n="features.updated.desc">Templates are maintained with the latest library versions.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="features.support.title">Community Support</h3>
+                    <p data-i18n="features.support.desc">Active community and documentation for each template.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="docs" class="docs">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="docs.title">Getting Started</h2>
+                <p data-i18n="docs.subtitle">3 steps to run a template</p>
+            </div>
+            <div class="docs-steps">
+                <div class="step reveal">
+                    <span class="step-number">1</span>
+                    <h3 data-i18n="docs.step1.title">Download</h3>
+                    <p data-i18n="docs.step1.desc">Click "Download" on your chosen template. The .zip file will download automatically from GitHub.</p>
+                    <code>template-main.zip</code>
+                </div>
+                <div class="step reveal">
+                    <span class="step-number">2</span>
+                    <h3 data-i18n="docs.step2.title">Extract</h3>
+                    <p data-i18n="docs.step2.desc">Extract the archive and enter the folder. Rename the folder to your project name.</p>
+                    <code>cd my-project</code>
+                </div>
+                <div class="step reveal">
+                    <span class="step-number">3</span>
+                    <h3 data-i18n="docs.step3.title">Install</h3>
+                    <p data-i18n="docs.step3.desc">Install dependencies and run the dev server. Done!</p>
+                    <code>npm install && npm run dev</code>
+                </div>
+            </div>
+            <div class="docs-note">
+                <p data-i18n="docs.requirements">Requirements: <strong>Node.js 18+</strong> and <strong>npm</strong> or <strong>yarn</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="faq.title">FAQ</h2>
+                <p data-i18n="faq.subtitle">Frequently asked questions</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <div class="faq-question" data-i18n="faq.q1">Are the templates really free?</div>
+                    <div class="faq-content">
+                        <p data-i18n="faq.a1">Yes, all templates are 100% free and open-source. You can use them in commercial and private projects without any restrictions.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-question" data-i18n="faq.q2">Do I need to credit the source?</div>
+                    <div class="faq-content">
+                        <p data-i18n="faq.a2">No, we don't require attribution. But if you want, you can give a star on GitHub - it's a nice way to support the project.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-question" data-i18n="faq.q3">How often are they updated?</div>
+                    <div class="faq-content">
+                        <p data-i18n="faq.a3">I try to update templates every few months when new framework versions are released. I always check if everything works before releasing an update.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-question" data-i18n="faq.q4">Can I modify a template?</div>
+                    <div class="faq-content">
+                        <p data-i18n="faq.a4">Sure! That's the whole point - you have full freedom. A template is just a starting point, adapt it to your needs.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-question" data-i18n="faq.q5">How can I help with the project?</div>
+                    <div class="faq-content">
+                        <p data-i18n="faq.a5">You can: report a bug on GitHub, propose a new feature, or create a pull request with a fix. Any help is appreciated!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="Tapdzi" class="footer-logo-img">
+                    <p data-i18n="footer.tagline">Ready-to-use web templates. Choose, download, build.</p>
+                </div>
+                <div class="footer-links-row">
+                    <a href="#templates" data-i18n="footer.templates">Templates</a>
+                    <a href="https://github.com/tapdzi" target="_blank">GitHub</a>
+                    <a href="#about" data-i18n="footer.about">About</a>
+                    <a href="#faq" data-i18n="footer.faq">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-disclaimer">
+                    GitHub and the GitHub logo are trademarks of GitHub, Inc. Tapdzi is not affiliated with, sponsored by, or endorsed by GitHub.
+                </p>
+                <p data-i18n="footer.copyright">&copy; 2025 Tapdzi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
