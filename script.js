@@ -636,6 +636,7 @@ document.querySelectorAll('.template-card').forEach(card => {
 
 loadGitHubTemplatesCount();
 
+// Hide loader on window load
 window.addEventListener('load', () => {
     const loader = document.getElementById('pageLoader');
     document.body.classList.remove('is-loading');
@@ -646,3 +647,15 @@ window.addEventListener('load', () => {
         loader.remove();
     }, 400);
 });
+
+// Fallback: force hide loader after 3 seconds max
+window.setTimeout(() => {
+    const loader = document.getElementById('pageLoader');
+    document.body.classList.remove('is-loading');
+    if (loader) {
+        loader.classList.add('hidden');
+        window.setTimeout(() => {
+            loader.remove();
+        }, 400);
+    }
+}, 3000);
