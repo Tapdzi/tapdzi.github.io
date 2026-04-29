@@ -112,26 +112,27 @@
                 <h2 data-i18n="templates.title">Templates</h2>
                 <p data-i18n="templates.subtitle">Click to preview</p>
             </div>
-            <div class="template-tech-nav" role="tablist" aria-label="Template technologies">
-                <button class="tech-filter-btn active" type="button" data-tech-filter="react">React</button>
-                <button class="tech-filter-btn" type="button" data-tech-filter="vue">Vue</button>
-                <button class="tech-filter-btn" type="button" data-tech-filter="vanilla">Vanilla</button>
+            <div class="template-tech-nav" role="tablist" aria-label="Template platforms">
+                <button class="tech-filter-btn active" type="button" data-tech-filter="vite">Vite</button>
+                <button class="tech-filter-btn" type="button" data-tech-filter="nextjs">Next.js</button>
+                <button class="tech-filter-btn" type="button" data-tech-filter="astro">Astro</button>
+                <button class="tech-filter-btn" type="button" data-tech-filter="nuxt">Nuxt</button>
             </div>
 
-            <!-- React -->
-            <div id="react-templates" class="category-section" data-tech="react">
+            <!-- Vite -->
+            <div id="vite-templates" class="category-section" data-tech="vite">
                 <h3 class="category-title">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/3840px-React-icon.svg.png" alt="React" class="category-logo">
-                    React
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg" alt="Vite" class="category-logo">
+                    Vite
                 </h3>
                 <div class="templates-grid">
-                    <div class="template-card reveal" onclick="openPreview('react')">
+                    <div class="template-card reveal" onclick="openPreview('react-vite')">
                         <div class="card-preview-img">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/3840px-React-icon.svg.png" alt="React">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg" alt="Vite React">
                             <span class="preview-fallback">Preview unavailable</span>
                         </div>
                         <div class="card-content">
-                            <h4>React Starter</h4>
+                            <h4>React + Vite</h4>
                             <p>React + TypeScript + Vite</p>
                             <span class="update-date">Updated: Jan 2025</span>
                             <a href="#" class="card-btn" onclick="event.stopPropagation()" target="_blank" data-i18n="card.download">
@@ -140,14 +141,14 @@
                             </a>
                         </div>
                     </div>
-                    <div class="template-card reveal" onclick="openPreview('dashboard')">
+                    <div class="template-card reveal" onclick="openPreview('vue-vite')">
                         <div class="card-preview-img">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/3840px-React-icon.svg.png" alt="React Dashboard">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg" alt="Vite Vue">
                             <span class="preview-fallback">Preview unavailable</span>
                         </div>
                         <div class="card-content">
-                            <h4>Admin Dashboard</h4>
-                            <p>React + Tailwind + Charts</p>
+                            <h4>Vue + Vite</h4>
+                            <p>Vue 3 + TypeScript + Vite</p>
                             <span class="update-date">Updated: Feb 2025</span>
                             <a href="#" class="card-btn" onclick="event.stopPropagation()" target="_blank" data-i18n="card.download">
                                 Download
@@ -158,21 +159,61 @@
                 </div>
             </div>
 
-            <!-- Vue -->
-            <div id="vue-templates" class="category-section" data-tech="vue">
+            <!-- Next.js -->
+            <div id="nextjs-templates" class="category-section" data-tech="nextjs">
                 <h3 class="category-title">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/960px-Vue.js_Logo_2.svg.png" alt="Vue" class="category-logo">
-                    Vue
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/394px-Nextjs-logo.svg.png" alt="Next.js" class="category-logo">
+                    Next.js
                 </h3>
                 <div class="templates-grid">
-                    <div class="template-card reveal" onclick="openPreview('vue')">
+                    <div class="template-card reveal" onclick="openPreview('nextjs')">
                         <div class="card-preview-img">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/960px-Vue.js_Logo_2.svg.png" alt="Vue">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/394px-Nextjs-logo.svg.png" alt="Next.js">
                             <span class="preview-fallback">Preview unavailable</span>
                         </div>
                         <div class="card-content">
-                            <h4>Vue Starter</h4>
-                            <p>Vue 3 + Composition API</p>
+                            <h4>Next.js Starter</h4>
+                            <p>React + Next.js + TypeScript</p>
+                            <span class="update-date">Updated: Jan 2025</span>
+                            <a href="#" class="card-btn" onclick="event.stopPropagation()" target="_blank" data-i18n="card.download">
+                                Download
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="template-card reveal" onclick="openPreview('nextjs-app')">
+                        <div class="card-preview-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/394px-Nextjs-logo.svg.png" alt="Next.js App Router">
+                            <span class="preview-fallback">Preview unavailable</span>
+                        </div>
+                        <div class="card-content">
+                            <h4>Next.js App Router</h4>
+                            <p>Next.js 14 + App Router + Tailwind</p>
+                            <span class="update-date">Updated: Feb 2025</span>
+                            <a href="#" class="card-btn" onclick="event.stopPropagation()" target="_blank" data-i18n="card.download">
+                                Download
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Astro -->
+            <div id="astro-templates" class="category-section" data-tech="astro">
+                <h3 class="category-title">
+                    <img src="https://astro.build/assets/press/astro-icon-light.svg" alt="Astro" class="category-logo">
+                    Astro
+                </h3>
+                <div class="templates-grid">
+                    <div class="template-card reveal" onclick="openPreview('astro')">
+                        <div class="card-preview-img">
+                            <img src="https://astro.build/assets/press/astro-icon-light.svg" alt="Astro">
+                            <span class="preview-fallback">Preview unavailable</span>
+                        </div>
+                        <div class="card-content">
+                            <h4>Astro Starter</h4>
+                            <p>Astro + Islands Architecture</p>
                             <span class="update-date">Updated: Jan 2025</span>
                             <a href="#" class="card-btn" onclick="event.stopPropagation()" target="_blank" data-i18n="card.download">
                                 Download
@@ -183,21 +224,21 @@
                 </div>
             </div>
 
-            <!-- Vanilla JS -->
-            <div id="vanilla-templates" class="category-section" data-tech="vanilla">
+            <!-- Nuxt -->
+            <div id="nuxt-templates" class="category-section" data-tech="nuxt">
                 <h3 class="category-title">
-                    <img src="https://cdn.vectorstock.com/i/750p/27/74/vanilla-javascript-language-vector-31602774.avif" alt="Vanilla JS" class="category-logo">
-                    Vanilla JS
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Nuxt_logo.svg/2560px-Nuxt_logo.svg.png" alt="Nuxt" class="category-logo">
+                    Nuxt
                 </h3>
                 <div class="templates-grid">
-                    <div class="template-card reveal" onclick="openPreview('vanilla')">
+                    <div class="template-card reveal" onclick="openPreview('nuxt')">
                         <div class="card-preview-img">
-                            <img src="https://cdn.vectorstock.com/i/750p/27/74/vanilla-javascript-language-vector-31602774.avif" alt="Vanilla JS">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Nuxt_logo.svg/2560px-Nuxt_logo.svg.png" alt="Nuxt">
                             <span class="preview-fallback">Preview unavailable</span>
                         </div>
                         <div class="card-content">
-                            <h4>Vanilla Starter</h4>
-                            <p>ES6+ without frameworks</p>
+                            <h4>Nuxt 3 Starter</h4>
+                            <p>Vue 3 + Nuxt 3 + SSR</p>
                             <span class="update-date">Updated: Dec 2024</span>
                             <a href="#" class="card-btn" onclick="event.stopPropagation()" target="_blank" data-i18n="card.download">
                                 Download
